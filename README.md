@@ -4,8 +4,8 @@
 
 ## Linguistic Ethical Interventions (LEI) 🌺 
 ### Data
-In the paper, we propose the LEI challenge based on the [UnQover] dataset by adding interventions to the QA example to verify if existing models can understand and follow the instructions we provided. We provide the training and eval dataset used in our paper:
-- **Easiest way**: You can download the data we used for train/test in the paper [here](/data). It contains the data for both the specified and un-specified cases.  
+In the paper, we propose the LEI challenge based on [UnQover](https://github.com/allenai/unqover) by adding interventions to the QA example to verify if existing models can understand and follow the instructions we provided. Here we briefly talk about the training and test dataset used in our paper:
+- **Easiest way**: You can download the data we used for train/test in the paper [here](/data). It contains the data for both the specified and underspecified cases.  
 - **From Scratch** 
     - We add interventions to a subset of UnQover (covers religion, ethnicity and gender). Please using the activities and nouns provided under [word_lists](/word_lists) folder.
     - The interventions are under [interventions](/interventions) folder. 
