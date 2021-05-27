@@ -100,7 +100,6 @@ spairs = get_subject_pairs(opt, lists)
 filler = get_fillers(opt, lists)
 templates = UnderspecifiedTemplates()
 
-
 if opt.template_type == 'slot_act_map':
     act_repo = lists.activities[opt.act]
     slots = lists.slots[opt.slot]
