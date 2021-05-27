@@ -20,7 +20,7 @@ do
       OUTPUT_PATH="${OUTPUTS}/roberta_${FLAG}_${LR}_${NUM_TRAIN}T${NUM_EPOCH}E"
       SAVE_STEPS=$(($NUM_EPOCH*$NUM_TRAIN/$BATCH_SIZE/${NUM_GPUS}/$NUM_CHECKPOINTS)) #2gpus
       echo "save steps: $SAVE_STEPS"
-      python3 roberta_fine-tuning.py  --data_dir $DATADIR/religion/noniids  --model_type roberta_${LR}_${NUM_EPOCH}  --model_name_or_path tli8hf/unqover-roberta-large-squad   --output_dir $OUTPUT_PATH --category religion  --learning_rate ${LR}  --overwrite_output_dir  --num_train_epochs $NUM_EPOCH  --per_gpu_train_batch_size $BATCH_SIZE  --num_train $NUM_TRAIN --train $WITH --save_steps $SAVE_STEPS --eval --evaldev dev --weight_ethical ${WEIGHT_ETHICAL} --weight_adversarial ${WEIGHT_ADVERSARIAL} --weight_irrelevant ${WEIGHT_IRRELEVANT}
+      python3 roberta_fine-tuning.py  --data_dir $DATADIR/religion  --model_type roberta_${LR}_${NUM_EPOCH}  --model_name_or_path tli8hf/unqover-roberta-large-squad   --output_dir $OUTPUT_PATH --category religion  --learning_rate ${LR}  --overwrite_output_dir  --num_train_epochs $NUM_EPOCH  --per_gpu_train_batch_size $BATCH_SIZE  --num_train $NUM_TRAIN --train $WITH --save_steps $SAVE_STEPS --eval --evaldev dev --weight_ethical ${WEIGHT_ETHICAL} --weight_adversarial ${WEIGHT_ADVERSARIAL} --weight_irrelevant ${WEIGHT_IRRELEVANT}
    done
 done
 

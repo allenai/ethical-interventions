@@ -38,4 +38,11 @@ In the paper, we propose the LEI challenge based on [UnQover](https://github.com
 Our model is based on RoBERTa-SQuAD model, which can be obtained from [UnQover](https://github.com/allenai/unqover) repo (See Section 2).
 > remember to install the required packages as in requirement.txt
 
-To fine tune the above model on our LEI dataset, simply run `./run.sh 1e-5 data outputs 64 4 4 1 "--doadversarial --doirrelevant --squad" U_ US theta4 1 0.5 1`. Note that this also includes the model selection part, and feel free to comment that out.
+We fine tune the aforementioned model on religion dataset and verify its generalization to gender/ethnicity. 
+To do that, simply run `./run.sh 1e-5 data/underspecified outputs 64 4 4 1 "--doadversarial --doirrelevant --squad" U_ US theta4 1 0.5 1`. Note that this also includes the model selection part, and feel free to comment that out.
+
+
+----
+Todo:
+- [ ] spotted typos in interventions
+- [ ] run the cmd to verify the code
