@@ -1,9 +1,15 @@
-# [Ethical-Advice Taker:Do Language Models Understand Natural Language Interventions?]() (ACL 2021 Findings)
+# Linguistic Ethical Interventions (LEI) 🌺 
 
-[Jieyu Zhao](https://jyzhao.net/), [Daniel Khashabi](https://danielkhashabi.com/), [Tushar Khot](https://allenai.org/team/tushark), [Ashish Sabharwal](https://allenai.org/team/ashishs), and [Kai-Wei Chang](http://web.cs.ucla.edu/~kwchang/)
+Is it possible to use natural language to *intervene* in a model’s behavior and alter its prediction in a desired way? Linguistic Ethical Interventions (or, LEI 🌺) is a dataset designed for studying this question. In this task, the goal is to amend a question answering (QA) model’s unethical behavior by communicating context-specific principles of ethics and equity to it. 
 
-## Linguistic Ethical Interventions (LEI) 🌺 
-### Data
+
+<p align="center">
+  <img width="430" src="lei_example.png">
+</p>
+
+This repository contains the data and the baselines used in our experiments. See the details below. 
+
+## Getting the data 
 In the paper, we propose the LEI challenge based on [UnQover](https://github.com/allenai/unqover) by adding interventions to the QA example to verify if existing models can understand and follow the instructions we provided. Here we briefly talk about the training and test dataset used in our paper:
 - **Easiest way**: You can download the data we used for train/test in the paper [here](/data). It contains the data for both the specified and underspecified cases.  
 - **From Scratch** 
@@ -46,3 +52,9 @@ To do that, simply run `./run.sh 1e-5 data/underspecified outputs 64 4 4 1 "--do
 Todo:
 - [ ] spotted typos in interventions
 - [ ] run the cmd to verify the code
+
+
+
+## Relevant Paper 
+#### [Ethical-Advice Taker:Do Language Models Understand Natural Language Interventions?]() (ACL 2021 Findings) [Jieyu Zhao](https://jyzhao.net/), [Daniel Khashabi](https://danielkhashabi.com/), [Tushar Khot](https://allenai.org/team/tushark), [Ashish Sabharwal](https://allenai.org/team/ashishs), and [Kai-Wei Chang](http://web.cs.ucla.edu/~kwchang/)
+
